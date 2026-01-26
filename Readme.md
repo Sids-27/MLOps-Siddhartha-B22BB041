@@ -7,10 +7,12 @@
 ---
 
 ## Colab Notebook
-🔗 <Colab Link>
+Q1 https://colab.research.google.com/drive/1vRLSX_aNv5ugSat1rtWgzrqtxiKzQSsW?usp=sharing
+
+Q2 https://colab.research.google.com/drive/13fhAAxyByQP-oED5U9lzz6VIB3Sma8zh?usp=sharing
 
 ## GitHub Repository
-🔗 <GitHub Repository Link>
+https://github.com/Sids-27/MLOps-Siddhartha-B22BB041
 
 ---
 
