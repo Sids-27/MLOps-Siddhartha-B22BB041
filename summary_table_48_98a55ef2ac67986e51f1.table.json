@@ -1,0 +1,1 @@
+{"columns": ["Metric", "Value"], "data": [["Total Parameters", "3,249,994"], ["FLOPs (GFLOPs)", "0.31"], ["Best Test Accuracy (%)", "90.22"], ["Final Train Accuracy (%)", "94.49"], ["Final Test Accuracy (%)", "90.08"], ["Training Epochs", "30"], ["Batch Size", "128"], ["Initial Learning Rate", "0.001"]]}
