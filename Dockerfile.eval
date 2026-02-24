@@ -1,0 +1,29 @@
+# ============================================================
+# Dockerfile.eval — Production Evaluation-Only Image
+# ============================================================
+# This image pulls the fine-tuned model from your HuggingFace
+# profile and runs evaluation automatically on startup.
+# ============================================================
+
+FROM python:3.10-slim-bookworm
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+# Build arg: your HuggingFace repo id  (e.g.  your-username/distilbert-reviews-genres)
+ARG HF_REPO
+ENV HF_REPO=${HF_REPO}
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends gcc g++ && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY src/ ./src/
+
+# On startup: evaluate the model pulled from HuggingFace
+CMD ["sh", "-c", "cd src && python eval.py --hf_repo ${HF_REPO}"]

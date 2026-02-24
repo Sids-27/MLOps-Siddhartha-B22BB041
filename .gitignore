@@ -1,0 +1,29 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Model artifacts (can be large)
+distilbert-reviews-genres/
+results/
+logs/
+eval_tmp/
+
+# Data caches
+genre_reviews_dict.pickle
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+venv/
